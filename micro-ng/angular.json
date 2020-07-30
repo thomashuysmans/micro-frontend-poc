@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "micro-ng:build"
+            "browserTarget": "micro-ng:build",
+            "port": 5001
           },
           "configurations": {
             "production": {
