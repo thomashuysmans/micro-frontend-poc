@@ -96,16 +96,16 @@
     //   }
     //   reactElContainer.appendChild(reactEl);
 
-    //   const ngEl = document.createElement('ng-el');
-    //   ngEl.setAttribute('name', name);
-    //   ngEl.addEventListener('helloEvt', (e) => helloEvent('Angular'));
+      const ngEl = document.createElement('ng-el');
+      // ngEl.setAttribute('name', name);
+      // ngEl.addEventListener('helloEvt', (e) => helloEvent('Angular'));
 
 
-    //   const ngElContainer =  document.getElementById('ng-container')
-    //   if (ngElContainer.children.length > 0) {
-    //     ngElContainer.removeChild(ngElContainer.children[0]);
-    //   }
-    //   ngElContainer.appendChild(ngEl);
+      const ngElContainer =  document.getElementById('ng-container')
+      if (ngElContainer.children.length > 0) {
+        ngElContainer.removeChild(ngElContainer.children[0]);
+      }
+      ngElContainer.appendChild(ngEl);
 
     //   logMessage('You', `my name is ${name}`)
 
@@ -123,7 +123,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
-  <!-- <script src="http://localhost:5001/main.js"></script>
-  <script src="http://localhost:5002/main.js"></script> -->
+  <script src="http://localhost:5001/main.js"></script>
+  <!-- <script src="http://localhost:5002/main.js"></script> -->
 </body>
 </html>
