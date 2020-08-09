@@ -61,7 +61,9 @@
       <div class="col">
         <div class="card">
           <h5 class="card-header">Angular</h5>
-          <div class="card-body" id="ng-container"></div>
+          <div class="card-body" id="ng-container">
+            <ng-el></ng-el>
+          </div>
         </div>
       </div>
       <div class="col">
@@ -70,14 +72,15 @@
           <div class="card-body" id="react-container"></div>
         </div>
       </div>
-      <!-- <div class="col">
+      <div class="col">
         <div class="card">
           <h5 class="card-header">Vue</h5>
           <div class="card-body" id="vue-container">
-            <!-- <example-component></example-component>
+            <example-component></example-component>
+            <widget-vue></widget-vue>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
     <div class="row console">
       <div class="col">
@@ -93,27 +96,27 @@
     function tellComponents() {
       const name = document.getElementById('yourName').value;
 
-      const reactEl = document.createElement('react-el');
-      reactEl.setAttribute('name', name);
-      reactEl.setAttribute('onHelloEvt', 'onHelloEvt');
-      reactEl.addEventListener('onHelloEvt', (e) => helloEvent('React'));
+      // const reactEl = document.createElement('react-el');
+      // reactEl.setAttribute('name', name);
+      // reactEl.setAttribute('onHelloEvt', 'onHelloEvt');
+      // reactEl.addEventListener('onHelloEvt', (e) => helloEvent('React'));
 
-      const reactElContainer =  document.getElementById('react-container')
-      if (reactElContainer.children.length > 0) {
-        reactElContainer.removeChild(reactElContainer.children[0]);
-      }
-      reactElContainer.appendChild(reactEl);
+      // const reactElContainer =  document.getElementById('react-container')
+      // if (reactElContainer.children.length > 0) {
+      //   reactElContainer.removeChild(reactElContainer.children[0]);
+      // }
+      // reactElContainer.appendChild(reactEl);
 
-      const ngEl = document.createElement('ng-el');
-      // ngEl.setAttribute('name', name);
-      // ngEl.addEventListener('helloEvt', (e) => helloEvent('Angular'));
+      // const ngEl = document.createElement('ng-el');
+      // // ngEl.setAttribute('name', name);
+      // // ngEl.addEventListener('helloEvt', (e) => helloEvent('Angular'));
 
 
-      const ngElContainer =  document.getElementById('ng-container')
-      if (ngElContainer.children.length > 0) {
-        ngElContainer.removeChild(ngElContainer.children[0]);
-      }
-      ngElContainer.appendChild(ngEl);
+      // const ngElContainer =  document.getElementById('ng-container')
+      // if (ngElContainer.children.length > 0) {
+      //   ngElContainer.removeChild(ngElContainer.children[0]);
+      // }
+      // ngElContainer.appendChild(ngEl);
 
       
       // Add the vue element to the page
@@ -147,7 +150,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
   <script src="http://localhost:5001/main.js"></script>
-  <script src="http://localhost:5002/micro-vue.js"></script>
+  <!-- <script src="http://localhost:5002/micro-vue.js"></script> -->
+  <script src="dist/micro-vue.js"></script>
   <script src="http://localhost:5003/static/js/main.75a14b85.chunk.js"></script>
 </body>
 </html>
