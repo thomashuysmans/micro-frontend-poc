@@ -14,7 +14,19 @@ Vue.customElement('example-component', ExampleComponent, {
   // Additional options
 });
 
+Vue.customElement('widget-vue', {
+  props: [
+    'prop1',
+    'prop2',
+    'prop3'
+  ],
+  data: {
+    message: 'Hello Vue!'
+  },
+  template: '<p>{{ message }}, {{ prop1  }}, {{prop2}}, {{prop3}}</p>'
+});
 
-// new Vue({
-//   render: h => h(App),
-// }).$mount('#app')
+
+new Vue({
+  render: h => h(ExampleComponent),
+}).$mount('#app')

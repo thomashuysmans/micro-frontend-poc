@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run build && serve -l 5002 dist",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target wc --name micro-vue 'src/components/ExampleComponent.vue'",
+    "build": "vue-cli-service build --target wc --name micro-vue src/components/ExampleComponent.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
