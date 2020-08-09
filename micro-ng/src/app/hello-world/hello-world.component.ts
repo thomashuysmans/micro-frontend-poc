@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hello-world',
@@ -8,9 +8,21 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
 
+
+  @Input() name: string;
+
+  @Output() MessageEvent: EventEmitter<string> = new EventEmitter();
+
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  onClick() : void {
+    this.MessageEvent.emit("This is a messsage from the Angular component");
   }
 
 }

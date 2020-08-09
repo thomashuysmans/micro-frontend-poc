@@ -62,11 +62,11 @@
         <div class="card">
           <h5 class="card-header">Angular</h5>
           <div class="card-body" id="ng-container">
-            <ng-el></ng-el>
+            <!-- <ng-el></ng-el> -->
           </div>
         </div>
       </div>
-      <div class="col">
+      <!-- <div class="col">
         <div class="card">
           <h5 class="card-header">React</h5>
           <div class="card-body" id="react-container"></div>
@@ -80,7 +80,7 @@
             <widget-vue></widget-vue>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- <div class="row console">
       <div class="col">
@@ -107,16 +107,16 @@
       // }
       // reactElContainer.appendChild(reactEl);
 
-      // const ngEl = document.createElement('ng-el');
-      // // ngEl.setAttribute('name', name);
-      // // ngEl.addEventListener('helloEvt', (e) => helloEvent('Angular'));
+      const ngEl = document.createElement('ng-el');
+      ngEl.setAttribute('name', name);
+      ngEl.addEventListener('MessageEvent', (e) => helloEvent(e));
 
 
-      // const ngElContainer =  document.getElementById('ng-container')
-      // if (ngElContainer.children.length > 0) {
-      //   ngElContainer.removeChild(ngElContainer.children[0]);
-      // }
-      // ngElContainer.appendChild(ngEl);
+      const ngElContainer =  document.getElementById('ng-container')
+      if (ngElContainer.children.length > 0) {
+        ngElContainer.removeChild(ngElContainer.children[0]);
+      }
+      ngElContainer.appendChild(ngEl);
 
       
       // Add the vue element to the page
@@ -135,9 +135,10 @@
 
     }
 
-    // function helloEvent(who) {
-    //   logMessage(who, 'hello');
-    // }
+    function helloEvent(event) {
+      alert(event.detail);
+      //logMessage(who, 'hello');
+    }
 
     // function logMessage(source, msg) {
     //   const msgContainer = document.getElementById('messages');
