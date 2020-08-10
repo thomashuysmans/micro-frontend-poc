@@ -48,7 +48,7 @@
           <a class="nav-link" onclick="navigateTo('app1')" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" onclick="navigateTo('app2')" href="#">Application 2</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -145,11 +145,17 @@
 
       }
 
+      if(name === "app2") {
+        const ngApp2Element = document.createElement('ng-app2-el');
+        loadMicroApplication(ngApp2Element);
+      }
+
     }
 
     function loadMicroApplication(microAppElement){
       const contentContainer = document.getElementById('container-content');
 
+      // Clearing the host container of other micro applications. 
       if(contentContainer.children.length > 0) {
         contentContainer.removeChild(contentContainer.children[0]);
       }
@@ -212,11 +218,13 @@
   </script>
 
   <!-- <script src="https://unpkg.com/vue"></script> -->
-  <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+  <!-- <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script>
-  <script src="dist/micro-vue.js"></script>
+  <!-- <script src="dist/micro-vue.js"></script> -->
   <script src="dist/main.js"></script>
+  <script src="dist/main.b9bd9abc9e0d21c67455.js"></script>
+  <!-- <script src="dist/main.557620ade8d911144de6.js"></script> -->
 
 </body>
 </html>
