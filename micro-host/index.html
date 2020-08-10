@@ -50,20 +50,6 @@
         <li class="nav-item">
           <a class="nav-link" onclick="navigateTo('app2')" href="#">Application 2</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -167,28 +153,11 @@
     function tellComponents() {
       const name = document.getElementById('yourName').value;
 
-      // const reactEl = document.createElement('react-el');
-      // reactEl.setAttribute('name', name);
-      // reactEl.setAttribute('onHelloEvt', 'onHelloEvt');
-      // reactEl.addEventListener('onHelloEvt', (e) => helloEvent('React'));
-
-      // const reactElContainer =  document.getElementById('react-container')
-      // if (reactElContainer.children.length > 0) {
-      //   reactElContainer.removeChild(reactElContainer.children[0]);
-      // }
-      // reactElContainer.appendChild(reactEl);
-
       const ngEl = document.createElement('ng-el');
       ngEl.setAttribute('name', name);
       ngEl.addEventListener('MessageEvent', (e) => helloEvent(e));
 
-
-      const ngElContainer =  document.getElementById('ng-container')
-      if (ngElContainer.children.length > 0) {
-        ngElContainer.removeChild(ngElContainer.children[0]);
-      }
-      ngElContainer.appendChild(ngEl);
-
+      loadMicroApplication(ngEl);
       
       // Add the vue element to the page
       // const vueEl = document.createElement('example-component');
