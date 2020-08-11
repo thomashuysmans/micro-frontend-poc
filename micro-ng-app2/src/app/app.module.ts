@@ -32,7 +32,7 @@ import { RouterModule } from '@angular/router';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [],
   entryComponents: [
     AppComponent,
     HelloWorldComponent
