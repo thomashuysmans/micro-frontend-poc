@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-hashing all --single-bundle true",
+    "deploy": "npm run build && npm run copyToHost",
+    "build": "ng build --prod --output-hashing none --single-bundle true",
+    "copyToHost": "cp dist/micro-ng-search/main.js ../micro-host/dist/micro-ng-search/main.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
