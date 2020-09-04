@@ -4,11 +4,14 @@ export interface ClientConfig {
     src: string | string[];
     element: string;
     route: string;
+    preload: boolean;
 }
 
 export interface ClientConfigs {
     [name: string]: ClientConfig
 }
+
+
 
 export interface ShellConfig {
     outletId?: string;
